@@ -16,6 +16,68 @@
   }
 }
 
+@font-face {
+  font-family: Acrom_light;
+  src: url("./fonts/Acrom-Light.woff") format("woff");
+}
+@font-face {
+  font-family: Acrom_light;
+  src: url("./fonts/Acrom-Light.ttf") format("ttf");
+}
+@font-face {
+  font-family: Acrom_light;
+  src: url("./fonts/Acrom-Light.eot") format("eot");
+}
+@font-face {
+  font-family: Acrom_light;
+  src: url("./fonts/Acrom-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: Acrom_Regular;
+  src: url("./fonts/Acrom-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: Acrom_Regular;
+  src: url("./fonts/Acrom-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: Acrom_Regular;
+  src: url("./fonts/Acrom-Regular.eot") format("eot");
+}
+@font-face {
+  font-family: Acrom_Regular;
+  src: url("./fonts/Acrom-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Acrom_Bold;
+  src: url("./fonts/Acrom-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: Acrom_Bold;
+  src: url("./fonts/Acrom-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: Acrom_Bold;
+  src: url("./fonts/Acrom-Bold.eot") format("eot");
+}
+@font-face {
+  font-family: Acrom_Bold;
+  src: url("./fonts/Acrom-Bold.woff2") format("woff2");
+}
+
+
 body {
 }
 
+input:invalid[focused="true"]{
+  border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ span{
+  display: block;
+}
+
+.error{
+  color: red;
+  display: none;
+}
