@@ -4,6 +4,7 @@ import Services from "./Components/Services";
 import FAQ from "./Components/FAQ";
 import Opinions from "./Components/Opinions";
 import Form from "./Components/Form";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <FAQ></FAQ>
       <Opinions></Opinions>
       <Form></Form>
+      <Footer></Footer>
     </div>
   );
 }

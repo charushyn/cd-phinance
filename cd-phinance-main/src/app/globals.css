@@ -81,3 +81,61 @@ input:invalid[focused="true"] ~ span{
   color: red;
   display: none;
 }
+
+@keyframes Question {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 100px;
+  }
+}
+@keyframes Answer {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100px;
+  }
+}
+@keyframes Hr {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 90deg;
+  }
+}
+@keyframes OpacityBlock {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 10;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.animateQuestion{
+  animation: Question 1s ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.animateAnswer{
+  animation: Answer 1s ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.animateHr{
+  animation: Hr 1s ease;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.animateOpacityBlock{
+  animation: OpacityBlock 1s ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+

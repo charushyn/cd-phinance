@@ -2,6 +2,7 @@
 
 import React from "react";
 import FormInput from "../UI/FormInput";
+import DefaultButton from "../UI/DefaultButton";
 
 export default function Form(){
     const [values, setValues] = React.useState({
@@ -53,7 +54,7 @@ export default function Form(){
 
 
     return(
-        <form class='flex flex-col px-4 font-Acrom_Light mt-[80px]' onSubmit={() => sendData()}>
+        <form class='flex flex-col px-4 font-Acrom_Light my-[80px]' onSubmit={() => sendData()}>
             <p class='font-Acrom_Bold text-center'>Не знайшли потрібний розділ/маєте додаткові питання?</p>
             <p class='text-center'>Залишіть форму!</p>
             <div class='flex flex-col gap-8 mt-4'>
@@ -63,10 +64,7 @@ export default function Form(){
                     )
                 })}
             </div>
-            <div class='mobile-s:my-4'>
-                <button text={'-'}></button>
-                
-            </div>
+            <DefaultButton type="submit" text='надіслати'></DefaultButton>
         </form>
     )
 }
