@@ -6,7 +6,7 @@ import { useInView, triggerOnce } from "react-intersection-observer";
 export default function FAQBlock(props){
     const {ref: faqRef, inView: isBlockVisible } = useInView({triggerOnce: true})
     return(
-        <div ref={faqRef} class={`flex flex-col h-fit gap-2 font-Acrom_Light opacity-0 ${isBlockVisible ? 'animateOpacityBlock' : ''}`}>
+        <div ref={faqRef} class={`flex flex-col h-fit gap-2 font-Acrom_Light opacity-0 ${isBlockVisible ? 'animateOpacityItem' : ''}`}>
             <div class='h-fit relative'>
                 <img src={'https://wpcdn.us-midwest-1.vip.tn-cloud.net/www.850businessmagazine.com/content/uploads/2019/10/iStock-694415714-1024x688.jpg'} class=' object-cover w-full h-[300px]'></img>
                 <Link class='flex flex-row w-fit h-fit px-4 py-2 gap-2 bg-white z-20 absolute bottom-0 right-0' href={'/'}>

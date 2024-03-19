@@ -4,7 +4,10 @@ import React from "react";
 import FormInput from "../UI/FormInput";
 import DefaultButton from "../UI/DefaultButton";
 
+import { useRouter } from "next/navigation";
+
 export default function Form(){
+    const router = useRouter()
     const [values, setValues] = React.useState({
         name: "",
         surname: "",
@@ -20,7 +23,7 @@ export default function Form(){
             label: 'Ваше ім‎я',
             errorMessage: 'Імя занадто коротке або довге! 2-16 Символів.',
             required: true,
-            pattern: "^[а-яА-ЯІі]{2,16}$",
+            pattern: "^[а-яА-ЯІіa-zA-ZąćęłńóśźżĄĆĘŃÓŹŻŁ]{2,16}$",
         },
         {
             id: 1,
@@ -36,9 +39,9 @@ export default function Form(){
             id: 2,
             name: "number",
             type: "tel",
-            placeholder: "00-000-00-00",
+            placeholder: "000-000-000",
             label: 'Введіть номер телефону',
-            errorMessage: 'Введіть повний номер телефону.',
+            errorMessage: 'Введіть вірний номер телефону.',
             pattern: "[0-9]{9}",
             static: '+48',
             required: true,
@@ -54,7 +57,10 @@ export default function Form(){
 
 
     return(
-        <form class='flex flex-col px-4 font-Acrom_Light my-[80px]' onSubmit={() => sendData()}>
+        <form class='flex flex-col px-4 font-Acrom_Light my-[80px]' onSubmit={(e) => {
+            e.preventDefault()
+            router ? router.push('/success') : ''
+        }}>
             <p class='font-Acrom_Bold text-center'>Не знайшли потрібний розділ/маєте додаткові питання?</p>
             <p class='text-center'>Залишіть форму!</p>
             <div class='flex flex-col gap-8 mt-4'>

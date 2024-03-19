@@ -106,7 +106,7 @@ input:invalid[focused="true"] ~ span{
     rotate: 90deg;
   }
 }
-@keyframes OpacityBlock {
+@keyframes OpacityItem {
   0% {
     opacity: 0;
   }
@@ -133,8 +133,8 @@ input:invalid[focused="true"] ~ span{
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
-.animateOpacityBlock{
-  animation: OpacityBlock 1s ease;
+.animateOpacityItem{
+  animation: OpacityItem 1s ease;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
