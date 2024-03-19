@@ -14,7 +14,7 @@ export default function Header(){
 
     return(
         <header class='z-[50] w-full bg-black flex flex-row px-4 items-center mobile-s:h-[70px] justify-between fixed'>
-            <Image src={logo} class='w-fit h-[20px]'></Image>
+            <Image src={logo} class='w-fit h-[20px]' alt=""></Image>
             <div class='flex flex-row gap-5'>
                 <div class='flex flex-row gap-1 items-center relative' onClick={() => dispatch(setIsShowLang())}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
