@@ -1,10 +1,9 @@
 'use client'
 
-import RegisterForm from "../UI/RegisterForm"
-import Header from "../UI/Header"
+import LoginForm from "../UI/LoginForm"
 import Link from "next/link"
 
-export default function Registration(){
+export default function Login(){
     return(
         <div class='min-h-svh flex flex-col bg-black p-4 font-Acrom_Light text-white'>
                 <Link href='/' class='flex flex-row gap-2'>
@@ -13,8 +12,8 @@ export default function Registration(){
                     </svg>
                     <p>на головну</p>
                 </Link>
-                <p class='text-center mt-5'>Register</p>
-                <RegisterForm></RegisterForm>
+                <p class='text-center mt-5'>Login</p>
+                <LoginForm></LoginForm>
         </div>
     )
 }

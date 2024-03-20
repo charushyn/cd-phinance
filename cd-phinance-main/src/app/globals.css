@@ -69,8 +69,17 @@
 body {
 }
 
+.leaflet-container{
+  height: 200px;
+  z-index: 0;
+}
+
 input:invalid[focused="true"]{
   border: 1px solid red;
+}
+
+input:valid{
+  border: 2px solid green;
 }
 
 input:invalid[focused="true"] ~ span{

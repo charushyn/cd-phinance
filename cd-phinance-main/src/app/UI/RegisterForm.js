@@ -4,14 +4,14 @@ import React from "react";
 import FormInput from "./FormInput";
 import DefaultButton from "./DefaultButton";
 
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-export default function LoginForm(){
+export default function RegisterForm(){
 
     const [values, setValues] = React.useState({
         email: "",
         password: "",
+        confirmPassword: "",
     })
 
     const inputs = [
@@ -30,8 +30,18 @@ export default function LoginForm(){
             type: "password",
             placeholder: "password",
             label: 'Введіть password',
-            errorMessage: 'Введіть пароль.',
-            pattern: '[A-Za-z]+',
+            errorMessage: 'Пароль повинен мати в собі: 8-20 символів, 1 спец., 1 цифру, 1 велику букву та 1 малу!',
+            pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
+            required: true,
+        },
+        {
+            id: 2,
+            name: "confirmPassword",
+            type: "password",
+            placeholder: "Confirm Password",
+            label: 'Cofirm Password',
+            errorMessage: 'Password dont match!',
+            pattern: values.password,
             required: true,
         },
     ]
@@ -69,15 +79,15 @@ export default function LoginForm(){
                                     type={input.type}
                                     required={input.required}
                                     ></input>
-                                <span class='error'>{input.errorMessage}</span>
+                                <span className='error'>{input.errorMessage}</span>
                             </div>
                     )
                 })}
                 <div class='flex flex-col w-full gap-10'>
-                    <Link href={'/registration'} className=" text-white flex flex-row gap-2 underline">
-                            <p class=''>Новий користувач?</p>
+                    <Link href={'/login'} className=" text-white flex flex-row gap-2 underline">
+                            <p class=''>реєструвались раніше?</p>
                     </Link>
-                    <DefaultButton type="submit" text='login' theme='white'></DefaultButton>
+                    <DefaultButton type="submit" text='register' theme='white'></DefaultButton>
                 </div>
             </div>
         </form>
