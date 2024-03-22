@@ -1,8 +1,8 @@
 'use client'
 
 import React from "react";
-import FormInput from "../UI/FormInput";
-import DefaultButton from "../UI/DefaultButton";
+import FormInput from "../Components/FormInput";
+import DefaultButton from "../Components/DefaultButton";
 
 import { useRouter } from "next/navigation";
 

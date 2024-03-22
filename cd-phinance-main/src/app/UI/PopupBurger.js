@@ -7,10 +7,11 @@ import Link from "next/link"
 export default function PopupBurger(){
 
 
-    const popupIsShow = useSelector((state) => state.popupsReducer.isBurgerOpen)
+    const isShow = useSelector((state) => state.popupsReducer.isBurgerOpen)
+    console.log(isShow)
     const dispatch = useDispatch()
     return(
-        <div class={`w-full h-svh bg-[rgba(0,0,0,0.70)] ${popupIsShow ? '' : 'hidden'} z-[50] fixed`} onClick={() => dispatch(handleBurger())}>
+        <div class={`w-full h-svh bg-[rgba(0,0,0,0.70)] ${isShow? '' : 'hidden'} z-[50] fixed`} onClick={() => dispatch(handleBurger())}>
             <div className='h-fit flex flex-col gap-4 bg-[#D3BE5F] p-4' onClick={(e) => e.stopPropagation()}>
                 <div class='flex flex-row justify-between'>
                     <p>top</p>

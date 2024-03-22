@@ -4,6 +4,8 @@ import React from "react"
 
 import ButtonLink from "./ButtonLink"
 
+// title, description, link(to page with choosed service), photoUrl, iconUrl
+
 export default function Service(props){
     const [active, setActive] = React.useState(false)
 
@@ -22,16 +24,11 @@ export default function Service(props){
                     <div className=' text-white uppercase font-Acrom_Bold text-xl relative'>{props.title}</div>
                     <div className=' text-white relative'>{props.description}</div>
                     <div className='flex justify-end'>
-                        <ButtonLink text={'далі'} href='/'></ButtonLink>
+                        <ButtonLink text={'далі'} href='/login'></ButtonLink>
                     </div>
                 </div>
                 <style jsx>{
                         `
-                        @keyframes fadeIn {
-                            0% { opacity: 0; }
-                            50% { opacity: 0; }
-                            100% { opacity: 1; }
-                        }
                         .serviceC {
                             background-image: url(${props.photo});
                             background-size: cover;

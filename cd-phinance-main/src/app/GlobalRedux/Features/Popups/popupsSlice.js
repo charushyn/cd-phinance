@@ -13,14 +13,10 @@ export const popupsSlice = createSlice({
     initialState: initialState,
     reducers: {
         handleBurger: (state) => {
-            return{
-                isBurgerOpen: !state.isBurgerOpen
-            }
+            return state = {isLangOpen: state.isLangOpen, isBurgerOpen: !state.isBurgerOpen}
         },
         handleLang: (state) => {
-            return{
-                isLangOpen: !state.isLangOpen
-            }
+            return state = {isLangOpen: !state.isLangOpen, isBurgerOpen: state.isBurgerOpen}
         },
         clearState: (state) => {
             return{

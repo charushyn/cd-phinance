@@ -3,7 +3,8 @@
 import { createSlice, current } from "@reduxjs/toolkit"
 
 const initialState = {
-    lang: 'Ukrainian'
+    lang: 'Ukrainian',
+    id: 'ukr',
 }
 
 
@@ -12,9 +13,7 @@ export const langSlice = createSlice({
     initialState: initialState,
     reducers: {
         setLang: (state, action) => {
-            return{
-                lang: action.payload
-            }
+            return state = action.payload
         },
     }
 })

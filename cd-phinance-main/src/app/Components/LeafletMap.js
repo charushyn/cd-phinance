@@ -4,6 +4,8 @@ import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
 import { Icon } from "leaflet"
 
+// position
+
 export default function LeafletMap(){
 
     const position = [51.24272692022786, 22.519158024052366]

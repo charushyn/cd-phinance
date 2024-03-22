@@ -1,21 +1,42 @@
+'use client'
+
+import data from "./test";
+import { usePathname } from 'next/navigation';
+
+
 import Image from "next/image";
-import Header from "./UI/Header";
-import Services from "./Components/Services";
-import FAQ from "./Components/FAQ";
-import Opinions from "./Components/Opinions";
-import Form from "./Components/Form";
-import Footer from "./Components/Footer";
-import PopupBurger from "./Components/PopupBurger";
-import PopupLang from "./Components/PopupLang";
+import Header from "./Components/Header";
+import Services from "./UI/Services";
+import FAQ from "./UI/FAQ";
+import Opinions from "./UI/Opinions";
+import Form from "./UI/Form";
+import Footer from "./UI/Footer";
+import PopupBurger from "./UI/PopupBurger";
+import PopupLang from "./UI/PopupLang";
+
+const HomeUI = 
+  {
+    'Header': Header,
+    'Services': Services,
+    'FAQ': FAQ,
+  }
+
 
 export default function Home() {
+  const currentPage = usePathname()
   return (
     <div>
-      <Header></Header>
+      {Object.values(data.pages[currentPage])[0].map((dataItemUI) => {
+        const props = Object.values(dataItemUI)[0]
+        const functionComponent = HomeUI[Object.keys(dataItemUI)[0]]
+        if(typeof HomeUI[Object.keys(dataItemUI)[0]] != 'undefined'){
+          return(functionComponent(props))
+        } else {
+          console.log('not a function')
+        }
+      })}
       <PopupLang></PopupLang>
       <PopupBurger></PopupBurger>
-      <Services></Services>
-      <FAQ></FAQ>
       <Opinions></Opinions>
       <Form></Form>
       <Footer></Footer>

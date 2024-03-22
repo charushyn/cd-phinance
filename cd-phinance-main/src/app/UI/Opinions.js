@@ -1,6 +1,6 @@
 'use client'
 
-import ButtonLink from "../UI/ButtonLink"
+import ButtonLink from "../Components/ButtonLink"
 import CountUp from 'react-countup';
 import { useInView, triggerOnce } from "react-intersection-observer";
 

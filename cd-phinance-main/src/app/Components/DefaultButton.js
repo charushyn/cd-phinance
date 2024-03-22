@@ -1,3 +1,5 @@
+//type, theme, text, urlIcon
+
 export default function DefaultButton(props){
     return(
         <button type={props.type} class={`flex flex-row w-fit h-fit px-4 py-2 gap-2 bg-black z-20 ${props.theme == 'white' ? 'bg-white text-black' : 'bg-black text-white'}`}>

@@ -1,7 +1,7 @@
 'use client'
 
-import RegisterForm from "../UI/RegisterForm"
-import Header from "../UI/Header"
+import RegisterForm from "../Components/RegisterForm"
+import Header from "../Components/Header"
 import Link from "next/link"
 
 export default function Registration(){

@@ -1,10 +1,10 @@
 'use client'
 
-import Footer from "./Components/Footer";
-import Header from "./UI/Header";
-import PopupBurger from "./Components/PopupBurger";
-import PopupLang from "./Components/PopupLang";
-import ButtonLink from "./UI/ButtonLink";
+import Footer from "./UI/Footer";
+import Header from "./Components/Header";
+import PopupBurger from "./UI/PopupBurger";
+import PopupLang from "./UI/PopupLang";
+import ButtonLink from "./Components/ButtonLink";
 
 export default function notFound(){
     return(

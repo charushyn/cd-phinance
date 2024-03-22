@@ -11,15 +11,23 @@ export default function PopupLang(){
     const languages = [
         {
             lang: 'Ukrainian',
-            flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/510px-Flag_of_Ukraine.svg.png'
+            id: 'ukr',
+            flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/510px-Flag_of_Ukraine.svg.png',
         },
         {
             lang: 'Polski',
-            flag: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/640px-Flag_of_Poland.svg.png'
+            id: 'pol',
+            flag: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/640px-Flag_of_Poland.svg.png',
         },
         {
             lang: 'English',
-            flag: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png'
+            id: 'eng',
+            flag: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png',
+        },
+        {
+            lang: 'Russian',
+            id: 'rus',
+            flag: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/White-blue-white_flag.svg',
         },
     ]
 
@@ -37,7 +45,7 @@ export default function PopupLang(){
                 {
                     languages.map((item) => {
                         return(
-                            <div class={`flex flex-row gap-1 cursor-pointer ${currentLanguage == item.lang ? 'underline font-Acrom_Regular' : ''}`} onClick={() => dispatch(setLang(item.lang))} key={item.lang}>
+                            <div class={`flex flex-row gap-1 cursor-pointer ${currentLanguage == item.lang ? 'underline font-Acrom_Regular' : ''}`} onClick={() => dispatch(setLang({lang: item.lang, id: item.id}))} key={item.lang}>
                                 <img class='mobile-s:w-[30px] object-cover mobile-s:h-[20px] border-[1px]' src={item.flag}></img>
                                 <p>{item.lang}</p>
                             </div>

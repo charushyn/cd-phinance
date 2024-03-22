@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react"
-import LeafletMap from "../UI/LeafletMap"
+import LeafletMap from "../Components/LeafletMap"
 
 import Image from "next/image"
 import logo from '@/app/images/logo.png'
